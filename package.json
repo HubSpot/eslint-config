@@ -1,0 +1,50 @@
+{
+  "name": "eslint-config-hubspot",
+  "version": "7.0.0",
+  "description": "HubSpot ESLint configurations",
+  "license": "MIT",
+  "repository": "hubspot/eslint-config",
+  "contributors": [
+    "Nicholas Hwang <nhwang@hubspot.com>"
+  ],
+  "engines": {
+    "node": ">=6.9"
+  },
+  "scripts": {
+    "ava": "ava",
+    "lint": "eslint .",
+    "pretest": "npm link && npm link eslint-config-hubspot",
+    "test": "npm run lint && npm run ava",
+    "diff": "babel-node __scripts__/diff"
+  },
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "hubspot"
+  ],
+  "devDependencies": {
+    "ava": "0.17.0",
+    "babel-eslint": "7.1.1",
+    "chalk": "1.1.3",
+    "eslint": "3.12.2",
+    "eslint-plugin-react": "6.8.0",
+    "glob": "7.1.1",
+    "yarn": "0.18.1"
+  },
+  "peerDependencies": {
+    "babel-eslint": "7.1.x",
+    "eslint": "3.12.x",
+    "eslint-plugin-react": "6.8.x"
+  },
+  "eslintConfig": {
+    "extends": "hubspot/esnext",
+    "root": true
+  },
+  "ava": {
+    "failFast": true,
+    "files": [
+      "__tests__/**/*.spec.js",
+      "!__tests__/__fixtures__/**"
+    ]
+  }
+}
