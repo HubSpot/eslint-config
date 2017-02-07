@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-hubspot",
-  "version": "7.0.0",
+  "version": "7.0.1",
   "description": "HubSpot ESLint configurations",
   "license": "MIT",
   "repository": "hubspot/eslint-config",
