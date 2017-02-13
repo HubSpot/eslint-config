@@ -228,6 +228,9 @@ module.exports = {
     // disallow mixed spaces and tabs for indentation
     'no-mixed-spaces-and-tabs': 'error',
 
+    // disallow use of chained assignment expressions
+    'no-multi-assign': 'error',
+
     // disallow multiple empty lines and only one newline at the end
     'no-multiple-empty-lines': ['error', {
       'max': 2,
@@ -385,6 +388,9 @@ module.exports = {
         'balanced': true
       }
     }],
+
+    // require or disallow spacing between template tags and their literals
+    'template-tag-spacing': ['error', 'never'],
 
     // require or disallow the Unicode BOM
     'unicode-bom': ['off', 'never'],
