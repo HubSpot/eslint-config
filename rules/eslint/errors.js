@@ -48,7 +48,11 @@ module.exports = {
     'no-extra-boolean-cast': 'error',
 
     // disallow unnecessary parentheses
-    'no-extra-parens': ['error', 'functions'],
+    'no-extra-parens': ['off', 'all', {
+      'conditionalAssign': true,
+      'nestedBinaryExpressions': false,
+      'returnAssign': false
+    }],
 
     // disallow unnecessary semicolons
     'no-extra-semi': 'error',
@@ -64,9 +68,6 @@ module.exports = {
 
     // disallow irregular whitespace outside of strings and comments
     'no-irregular-whitespace': 'error',
-
-    // DEPRECATED: disallow negation of the left operand of an in expression
-    'no-negated-in-lhs': 'error',
 
     // disallow the use of object properties of the global object (Math and JSON) as functions
     'no-obj-calls': 'error',

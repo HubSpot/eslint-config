@@ -24,6 +24,14 @@ module.exports = {
       'forbid': ['className', 'style']
     }],
 
+    // Forbid certain elements
+    'react/forbid-elements': ['off', {
+      'forbid': []
+    }],
+
+    // Forbid foreign propTypes
+    'react/forbid-foreign-prop-types': 'off',
+
     // Forbid certain propTypes (any, array, object)
     'react/forbid-prop-types': ['off', {
       'forbid': ['any', 'array', 'object']
@@ -55,7 +63,7 @@ module.exports = {
     'react/jsx-first-prop-new-line': ['error', 'multiline'],
 
     // Enforce event handler naming conventions in JSX
-    'react/jsx-handler-names': ['error', {
+    'react/jsx-handler-names': ['off', {
       'eventHandlerPrefix': 'handle',
       'eventHandlerPropPrefix': 'on',
     }],
@@ -77,7 +85,7 @@ module.exports = {
     // Prevent usage of .bind() and arrow functions in JSX props
     'react/jsx-no-bind': ['error', {
       'ignoreRefs': true,
-      'allowArrowFunctions': false,
+      'allowArrowFunctions': true,
       'allowBind': false,
     }],
 
@@ -220,6 +228,7 @@ module.exports = {
     // Enforce component methods order
     'react/sort-comp': ['error', {
       'order': [
+        'mixins',
         'static-methods',
         'lifecycle',
         'everything-else',
@@ -235,6 +244,9 @@ module.exports = {
     }],
 
     // Enforce style prop value being an object
-    'react/style-prop-object': 'error'
+    'react/style-prop-object': 'error',
+
+    // Prevent void DOM elements (e.g. <img />, <br />) from receiving children
+    'react/void-dom-elements-no-children': 'error'
   }
 };

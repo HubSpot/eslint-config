@@ -17,6 +17,7 @@ const RULES_GLOB = join(__dirname, '../rules', '**/*.js');
 const DEPRECATED = {
   'no-spaced-func': true,
   'no-native-reassign': true,
+  'no-negated-in-lhs': true,
   'prefer-reflect': true,
   'react/no-comment-textnodes': true,
   'react/require-extension': true,

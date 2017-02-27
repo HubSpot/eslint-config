@@ -19,14 +19,21 @@ module.exports = {
 
     // require camel case names
     'camelcase': ['error', {
-      'properties': 'always'
+      'properties': 'never'
     }],
 
     // enforce or disallow capitalization of the first letter of a comment'
     'capitalized-comments': ['off', 'never', {
-      'ignorePattern': '',
-      'ignoreInlineComments': false,
-      'ignoreConsecutiveComments': false
+      'line': {
+        'ignorePattern': '.*',
+        'ignoreInlineComments': true,
+        'ignoreConsecutiveComments': true
+      },
+      'block': {
+        'ignorePattern': '.*',
+        'ignoreInlineComments': true,
+        'ignoreConsecutiveComments': true
+      }
     }],
 
     // require trailing commas in multiline object literals
@@ -55,12 +62,12 @@ module.exports = {
 
     // require function names to match the name of the variable or property to which they are
     // assigned
-    'func-name-matching': ['error', {
+    'func-name-matching': ['off', 'always', {
       'includeCommonJSModuleExports': true
     }],
 
     // require function expressions to have a name
-    'func-names': ['error', 'as-needed'],
+    'func-names': ['warn', 'as-needed'],
 
     // enforces use of function declarations or expressions
     'func-style': ['error', 'declaration', {
@@ -185,7 +192,7 @@ module.exports = {
     }],
 
     // disallow the omission of parentheses when invoking a constructor with no arguments
-    'new-parens': 'off',
+    'new-parens': 'error',
 
     // require or disallow an empty newline after variable declarations
     'newline-after-var': 'off',
@@ -304,7 +311,7 @@ module.exports = {
     'operator-assignment': 'off',
 
     // enforce operators to be placed before or after line breaks
-    'operator-linebreak': ['error', 'before'],
+    'operator-linebreak': ['off', 'before'],
 
     // enforce padding within blocks
     'padded-blocks': ['error', 'never'],
