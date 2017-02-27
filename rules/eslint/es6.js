@@ -37,7 +37,10 @@ module.exports = {
     'constructor-super': 'error',
 
     // enforce the spacing around the * in generator functions
-    'generator-star-spacing': 'off',
+    'generator-star-spacing': ['error', {
+      'before': false,
+      'after': true
+    }],
 
     // disallow modifying variables of class declarations
     'no-class-assign': 'error',
@@ -84,7 +87,10 @@ module.exports = {
     'no-var': 'error',
 
     // require method and property shorthand syntax for object literals
-    'object-shorthand': ['error', 'always'],
+    'object-shorthand': ['error', 'always', {
+      'ignoreConstructors': false,
+      'avoidQuotes': true
+    }],
 
     // suggest using arrow functions as callbacks
     'prefer-arrow-callback': ['error', {
@@ -96,7 +102,7 @@ module.exports = {
     'prefer-const': 'error',
 
     // require destructuring from arrays and/or objects
-    'prefer-destructuring': ['error', {
+    'prefer-destructuring': ['off', {
       'array': true,
       'object': true
     }, {

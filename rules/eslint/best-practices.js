@@ -15,8 +15,10 @@ module.exports = {
     // treat var statements as if they were block scoped
     'block-scoped-var': 'error',
 
-    // enforce that class methods utilize this
-    'class-methods-use-this': 'off',
+    // enforce that class methods utilize "this"
+    'class-methods-use-this': ['off', {
+      'exceptMethods': [],
+    }],
 
     // specify the maximum cyclomatic complexity allowed in a program
     'complexity': ['off', 10],
@@ -107,7 +109,7 @@ module.exports = {
     'no-implied-eval': 'error',
 
     // disallow this keywords outside of classes or class-like objects
-    'no-invalid-this': 'error',
+    'no-invalid-this': 'off',
 
     // disallow usage of __iterator__ property
     'no-iterator': 'error',
@@ -155,7 +157,7 @@ module.exports = {
     'no-octal-escape': 'error',
 
     // disallow reassignment of function parameters
-    'no-param-reassign': ['error', {
+    'no-param-reassign': ['off', {
       'props': true
     }],
 
@@ -227,7 +229,7 @@ module.exports = {
     'no-with': 'error',
 
     // require using Error objects as Promise rejection reasons
-    'prefer-promise-reject-errors': ['error', {
+    'prefer-promise-reject-errors': ['off', {
       'allowEmptyReject': true
     }],
 
@@ -235,7 +237,7 @@ module.exports = {
     'radix': 'error',
 
     // disallow async functions which have no await expression
-    'require-await': 'error',
+    'require-await': 'off',
 
     // requires to declare all vars on top of their containing scope
     'vars-on-top': 'error',
