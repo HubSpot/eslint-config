@@ -281,6 +281,11 @@ module.exports = {
     // disallow whitespace before properties
     'no-whitespace-before-property': 'error',
 
+    // enforce the location of single-line statements
+    'nonblock-statement-body-position': ['error', 'beside', {
+      'overrides': {}
+    }],
+
     // enforce consistent line breaks inside braces
     'object-curly-newline': ['off', {
       'ObjectExpression': {
