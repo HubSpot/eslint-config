@@ -200,7 +200,7 @@ module.exports = {
     'react/prefer-es6-class': ['off', 'always'],
 
     // Require stateless functions when not using lifecycle methods, setState or ref
-    'react/prefer-stateless-function': 'error',
+    'react/prefer-stateless-function': 'off',
 
     // Prevent missing props validation in a React component definition
     'react/prop-types': ['error', {
