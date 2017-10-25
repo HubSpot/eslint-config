@@ -102,9 +102,6 @@ module.exports = {
     // disallow comparisons with the value NaN
     'use-isnan': 'error',
 
-    // ensure JSDoc comments are valid
-    'valid-jsdoc': 'error',
-
     // ensure that the results of typeof are compared against a valid string
     'valid-typeof': 'error'
   }
