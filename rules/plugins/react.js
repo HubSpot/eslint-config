@@ -107,7 +107,9 @@ module.exports = {
     'react/jsx-no-undef': 'error',
 
     // Enforce PascalCase for user-defined JSX components
-    'react/jsx-pascal-case': 'error',
+    'react/jsx-pascal-case': ['error', {
+      'allowAllCaps': true,
+    }],
 
     // Enforce props alphabetical sorting
     'react/jsx-sort-props': ['off', {
