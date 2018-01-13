@@ -36,7 +36,7 @@ module.exports = {
     }],
 
     // disallow use of undefined variable
-    'no-undefined': 'error',
+    'no-undefined': 'off',
 
     // disallow declaration of variables that are not used in the code
     'no-unused-vars': ['error', {
