@@ -1,5 +1,7 @@
 # eslint-config-hubspot
 
+# This repo is archived in favor of an internal ESLint config
+
 [![npm version](https://badge.fury.io/js/eslint-config-hubspot.svg)](https://badge.fury.io/js/eslint-config-hubspot)
 
 > HubSpot's ESLint [configurations](http://eslint.org/docs/developer-guide/shareable-configs.html)
